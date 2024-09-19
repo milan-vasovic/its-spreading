@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Abrushow';
+    src: url('Abrushow.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Abrushow', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+header {
+    background-color: #333;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 30px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #fff;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.image-container img {
+    max-width: 200px;
+    height: auto;
+}
+
+#maps {
+    margin-top: 20px;
+}
+
+.map .image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.map {
+    position: relative;
+    overflow: hidden;
+}
+
+.map img {
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.map:hover img {
+    transform: scale(1.1);
+}
+
+.map-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.map:hover .map-description {
+    opacity: 1;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+    font: inherit;
+    border: 1px solid #fff020;
+    color: black;
+    background: #fff020;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: black;
+    color: #fff020;
+}

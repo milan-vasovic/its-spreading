@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's Spreading - 2D Pixel RPG Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>It's Spreading</h1>
+        <p>A 2D Pixel Art RPG Game</p>
+        <a class="btn" href="https://vasovicm.itch.io/its-spreading">Download on Itch.io</a>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p><strong>Game Summary Pitch:</strong><br>
+                "It's Spreading" is a 2D pixel art game that unfolds the story of an unending invasion of slime on
+                humanity's last line of defense. Players can select from various heroes, each with unique abilities and
+                perks, to combat the relentless onslaught of slimes and strive to eliminate them before it's too late.
+                Time is of the essence! Immerse yourself in the pixelated world as you take on the role of a hero
+                standing against the relentless tide of slime invaders. Choose your character wisely, considering their
+                distinct abilities and perks, and engage in an epic battle for survival. The more you catch, the more
+                glory you will have. Glory unlocks new things.</p>
+            <p><strong>Player Experience:</strong><br>
+                Player at first can choose only one character. After playing and collecting glory he will unlock more
+                characters. Every character has a unique ability, art style, and music. By progressing further player
+                will encounter new cinematics. At the end collected glory will be saved, and player will have option to
+                save score. (In the future more content and mechanics requiring more glory to be unlocked)</p>
+        </section>
+        <section id="concept">
+            <h2>Concept</h2>
+            <p><strong>Gameplay Overview:</strong><br>
+                The player controls a preselected character and moves from the safe zone to the arena, aiming to hunt
+                down a specific kind of slime, otherwise, the player loses life. If lives go to 0, it's game over! Once
+                outside the safe zone, the player can't reenter it! Every character has unique abilities and can use
+                them a limited number of times, some have more lives! (currently all have same amount) The objective is
+                to survive as long as possible, hunt down as much as possible, and do it in the least amount of time.
+                Faster equals more points!</p>
+            <p><strong>Primary Mechanics:</strong><br>
+            <ul>
+                <li>Borders: A stopping force to limit players movement inside playable area.</li>
+                <li>Slimes: When the player hunts down the correct slime, they earn points and receive a new target.
+                    Otherwise, they lose a life, return to the starting position in the safe zone, and lose the game if
+                    their lives reach 0.</li>
+                <li>Abilities: Different characters possess unique abilities that significantly impact gameplay,
+                    providing strategic advantages in various ways.</li>
+                <li>Glory: Introduce an in-game currency, perhaps named "Glory," that players earn by successfully
+                    catching slimes. Used to unlock new characters abilities and other things.</li>
+                <li>Score: Points that accumulate, currently factoring speed of completing round, round and slimes.</li>
+            </ul>
+            </p>
+        </section>
+        <section id="assets">
+            <h2>Assets</h2>
+            <p><strong>Theme Interpretation:</strong><br>
+                It’s spreading. Simple 2D art with the goal of evoking nostalgia and fueling imagination and immersion
+                with an element of never ending to add difficulty. The more you progress more will come!</p>
+            <p><strong>Design:</strong><br>
+                A dark, damp, devastated and medieval environment aimed at enhancing immersion and fantasy, with a
+                contrast of vivid colors.</p>
+            <p><strong>Audio:</strong><br>
+            <ul>
+                <li>Music: To enhance the overall theme and vibe of the game, minimalist music will be incorporated,
+                    contributing to a subtle and immersive experience. Every character has unique song.</li>
+                <li>Sound Effects: To infuse more flair and polish into the gaming experience, a plethora of
+                    environmental sound effects will provide weight and feedback to the player's actions. Instead of
+                    relying on realistic foley, synthesized blips, bloops, and whooshes are utilized for a more
+                    distinctive auditory atmosphere.</li>
+            </ul>
+            </p>
+            <p><strong>Cinematics:</strong><br>
+                There are 2 types of cinematics. At the start of the specific rounds (at first, fifth, tenth, fifteenth)
+                and after losing the game. Every character has his own cinematics. Some are shared and some are unique
+                (purposely left images out from here, as a surprise and something to look forward while playing)</p>
+        </section>
+        <section id="characters">
+            <h2>Characters</h2>
+            <div class="image-container">
+                <img src="./assets/characters/my_knight_front/sprite_0.png" alt="Knight">
+                <img src="./assets/characters/my_wizard_front/sprite_0.png" alt="Wizard">
+                <img src="./assets/characters/my_prist_front/sprite_0.png" alt="Prist">
+                <img src="./assets/characters/my_druid_front/sprite_0.png" alt="Druid">
+            </div>
+        </section>
+        
+        <section id="slimes">
+            <h2>Slimes</h2>
+            <div class="image-container">
+                <img src="./assets/slimes/slime_blue/sprite_0.png" alt="Slime Blue">
+                <img src="./assets/slimes/slime_green/sprite_0.png" alt="Slime Green">
+                <img src="./assets/slimes/slime_purple/sprite_0.png" alt="Slime Purple">
+                <img src="./assets/slimes/slime_red/sprite_0.png" alt="Slime Red">
+                <img src="./assets/slimes/slime_yellow/sprite_0.png" alt="Slime Yellow">
+            </div>
+        </section>
+        <section id="maps">
+            <h2>Maps</h2>
+            <div class="image-container">
+                <div class="map">
+                    <img src="./assets/maps/map_gate.png" alt="Map Gate" onclick="openImage('./assets/maps/map_gate.png')">
+                    <div class="map-description">Map Gate</div>
+                </div>
+                <div class="map">
+                    <img src="./assets/maps/map_outside_wall.png" alt="Map Outside Wall" onclick="openImage('./assets/maps/map_outside_wall.png')">
+                    <div class="map-description">Map Outside Wall</div>
+                </div>
+                <div class="map">
+                    <img src="./assets/maps/map_inside_wall.png" alt="Map Inside Wall" onclick="openImage('./assets/maps/map_inside_wall.png')">
+                    <div class="map-description">Map Inside Wall</div>
+                </div>
+                <div class="map">
+                    <img src="./assets/maps/map_training_ground.png" alt="Map Training Ground" onclick="openImage('./assets/maps/map_training_ground.png')">
+                    <div class="map-description">Map Training Ground</div>
+                </div>
+                <div class="map">
+                    <img src="./assets/maps/map_wizard_tower.png" alt="Map Wizard Tower" onclick="openImage('./assets/maps/map_wizard_tower.png')">
+                    <div class="map-description">Map Wizard Tower</div>
+                </div>
+                <div class="map">
+                    <img src="./assets/maps/map_cemetery.png" alt="Map Cemetery" onclick="openImage('./assets/maps/map_cemetery.png')">
+                    <div class="map-description">Map Cemetery</div>
+                </div>
+                <div class="map">
+                    <img src="./assets/maps/map_flower_garden.png" alt="Map Flower Garden" onclick="openImage('./assets/maps/map_flower_garden.png')">
+                    <div class="map-description">Map Flower Garden</div>
+                </div>
+                <div class="map">
+                    <img src="./assets/maps/map_sleeping_quarters.png" alt="Map Sleeping Quarters" onclick="openImage('./assets/maps/map_sleeping_quarters.png')">
+                    <div class="map-description">Map Sleeping Quarters</div>
+                </div>
+                <div class="map">
+                    <img src="./assets/maps/map_ritual_chamber.png" alt="Map Ritual Chamber" onclick="openImage('./assets/maps/map_ritual_chamber.png')">
+                    <div class="map-description">Map Ritual Chamber</div>
+                </div>
+                <div class="map">
+                    <img src="./assets/maps/map_holy_chapel.png" alt="Map Holy Chapel" onclick="openImage('./assets/maps/map_holy_chapel.png')">
+                    <div class="map-description">Map Holy Chapel</div>
+                </div>
+                <div class="map">
+                    <img src="./assets/maps/map_secret_garden.png" alt="Map Secret Garden" onclick="openImage('./assets/maps/map_secret_garden.png')">
+                    <div class="map-description">Map Secret Garden</div>
+                </div>
+            </div>
+        </section>
+        <section id="experience">
+            <h2>Game Experience</h2>
+            <p><strong>UI:</strong><br>
+                Beside playable area there is also HUD with all important informations such as score, lives, current
+                round, current target, round time, abilities and cost and glory. Whole design is simple, minimalistic
+                and clear.</p>
+            <p><strong>Controls:</strong><br>
+                Keyboard, W, A, S, D or arrows for movement, space to use ability, numbers 1, 2 and 3. And key P to
+                pause the current game and select other character (feature for testing purposes in this demo, it will
+                not show all cinematics with right text when jumping from character to character in game that is in
+                progress. Best to explore all by playing. In future it will be changed and adapt in different way)</p>
+        </section>
+        <section id="timeline">
+            <h2>Development Timeline</h2>
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Assignment</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Design Document</td>
+                    <td>Other</td>
+                    <td>In progress</td>
+                    <td>13.01.2024</td>
+                    <td>Basic outline and concept</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Basic game window, character and slime movement coding</td>
+                    <td>Coding</td>
+                    <td>Finished</td>
+                    <td>13.01.2024</td>
+                    <td>Basic working model of window with first movement and borders</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>UI, basic mechanics, collisions coding</td>
+                    <td>Coding</td>
+                    <td>Finished</td>
+                    <td>14.01.2024</td>
+                    <td>Basic collision checks, and HUD display</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>First character, slimes and map art</td>
+                    <td>Art</td>
+                    <td>Finished</td>
+                    <td>15.01.2024</td>
+                    <td>Modeling first character and universal map</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Creating all classes and render coding</td>
+                    <td>Coding</td>
+                    <td>Finished</td>
+                    <td>16.01.2024</td>
+                    <td>Define all classes and render assets</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Creating basic character ability, round progression and score mechanics coding</td>
+                    <td>Coding</td>
+                    <td>In progress</td>
+                    <td>16.01.2024</td>
+                    <td>Adding ability feature to Player class, multiple rounds and score tracking</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Polishing collisions and character movement coding</td>
+                    <td>Coding</td>
+                    <td>Finished</td>
+                    <td>17.01.2024</td>
+                    <td>Refactor and polish player movement in terms of diagonal movement and distance</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Other characters and maps art</td>
+                    <td>Art</td>
+                    <td>Finished</td>
+                    <td>18.01.2024</td>
+                    <td>Design other characters and maps</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Creating Menu and pause features coding</td>
+                    <td>Coding</td>
+                    <td>In progress</td>
+                    <td>19.01.2024</td>
+                    <td>Adding functionality of pause that works as menu with different states</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Adding animations coding</td>
+                    <td>Coding</td>
+                    <td>Finished</td>
+                    <td>19.01.2024</td>
+                    <td>Adding animations for entities in game such as player and slime movement and idle state and
+                        hearth animation</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Character selection, round and maps progression coding</td>
+                    <td>Coding</td>
+                    <td>In Progress</td>
+                    <td>19.01.2024</td>
+                    <td>Adding option to select other characters if conditions are met</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Cinematics art</td>
+                    <td>Art</td>
+                    <td>Finished</td>
+                    <td>20.01.2024</td>
+                    <td>Creating cinematics for different characters, maps and situations</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Music art</td>
+                    <td>Art</td>
+                    <td>Finished</td>
+                    <td>20.01.2024</td>
+                    <td>After many attempts of creating my own music, creating my script that generate random music</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Cinematics mechanics, music and other abilities coding</td>
+                    <td>Coding</td>
+                    <td>In progress</td>
+                    <td>20.01.2024</td>
+                    <td>Adding cinematics, checks, music and abilities for other characters</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Polishing and refactoring code coding</td>
+                    <td>Coding</td>
+                    <td>Finished</td>
+                    <td>20.01.2024</td>
+                    <td>Refactoring, reducing, polishing and commenting code</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Testing and polishing coding</td>
+                    <td>Coding</td>
+                    <td>Finished</td>
+                    <td>23.01.2024</td>
+                    <td>Testing overall game with different characters, rounds, situations, abilities</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Creating exe file coding</td>
+                    <td>Coding</td>
+                    <td>Finished</td>
+                    <td>23.01.2024</td>
+                    <td>Making game usable for people without Python and needed libraries (current issue with antivirus
+                        flagging it as threat)</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Design Document styling other</td>
+                    <td>Other</td>
+                    <td>Finished</td>
+                    <td>23.01.2024</td>
+                    <td>Finished styling and adding stuff to design document</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Laying future plans other</td>
+                    <td>Other</td>
+                    <td>In progress</td>
+                    <td>23.01.2024</td>
+                    <td>New characters, abilities, maps, changes in core mechanics of scoring. Different game style,
+                        multiple options for characters ability selection etc.</td>
+                </tr>
+            </table>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am Milan Vasovic, coming from Serbia, a software engineering student. Currently, I am focused on
+                becoming a full-stack developer, but gaming is my passion. I have been exposed to the world of
+                programming for several years, but I have been working intensively and learning for about 4-5 months
+                now. This is the first real game I've made, and also the first project I've participated in. In the
+                future, I would like to create more games. I already have some ideas and plans, and I am slowly working
+                towards them.</p>
+            <p>Contact:<br>
+                <strong>Email:</strong> milan.vasovic.work@gmail.com
+            </p>
+        </section>
+    </main>
+    <footer>
+        <a class="btn" href="https://vasovicm.itch.io/its-spreading">Download on Itch.io</a>
+        <p>Developed by Milan Vasovic | Email: milan.vasovic.work@gmail.com</p>
+    </footer>
+    <script>
+        function openImage(src) {
+            window.open(src, '_blank');
+        }
+    </script>
+</body>
+
+</html>
